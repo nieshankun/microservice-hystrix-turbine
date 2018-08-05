@@ -1,0 +1,16 @@
+server:
+  port: 8085
+spring:
+  application:
+    name: microservice-hystrix-turbine
+eureka:
+  client:
+    service-url:
+      defaultZone: http://nsk:abcd1234@localhost:8764/eureka/
+  instance:
+    prefer-ip-address: true
+turbine:
+  app-config: microservice-consumer-movie
+  cluster-name-expression: "'default'"
+  instanceUrlSuffix: /hystrix.stream
+
